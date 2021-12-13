@@ -8,18 +8,22 @@
 
 A Simple Laravel package built to generate API Respond.
 
-## Installation
+# Installation
 
-Install via composer
+To get started, Install via composer:
 
 ```bash
 composer require yasinkose/api-responder
 ```
 
-### Publish package assets
+## Laravel
 
-```bash
-php artisan vendor:publish --provider="YasinKose\ApiResponder\ServiceProvider"
+#### Register Service Provider
+
+Append the following line to the `providers` key in `config/app.php` to register the package:
+
+```php
+YasinKose\ApiResponder\ServiceProvider::class,
 ```
 
 or if you're using **Lumen**, Add the following snippet to the ```bootstrap/app.php``` file under the providers section
@@ -28,6 +32,16 @@ as follows:
 ```php
 $app->register(YasinKose\ApiResponder\ServiceProvider::class);
 ```
+
+#### Register Facades
+
+If you're using **Laravel**, Add ```ApiResponder``` ```Facades``` to the ```aliases``` key:
+
+```php
+'Respond' => YasinKose\ApiResponder\Facades\ApiResponder::class,
+```
+
+or if you're using **Lumen** Add the following snippet to the ```bootstrap/app.php```
 
 ```php
 class_alias(YasinKose\ApiResponder\Facades\ApiResponder::class, "Respond");
