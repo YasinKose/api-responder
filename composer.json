@@ -1,0 +1,50 @@
+{
+  "name": "yasinkose/api-responder",
+  "description": "A api responder",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "responder"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Yasin Köse",
+      "email": "yasin.kose.123@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "illuminate/support": "^6.0|^7.0|^8.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0|^5.0|^6.0",
+    "phpunit/phpunit": "^8.4|^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "YasinKose\\ApiResponder\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "YasinKose\\ApiResponder\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "phpunit": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "YasinKose\\ApiResponder\\ServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
