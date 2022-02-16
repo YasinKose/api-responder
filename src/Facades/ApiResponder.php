@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static created($attr = null)
  * @method static failedValidation(string $message = "Unprocessable Entity", $errors = [])
  * @method static noContent(string $message = "No Content", $errors = [])
+ * @method static accepted(string $message = "Accepted", $attr = [])
  */
 class ApiResponder extends Facade
 {
