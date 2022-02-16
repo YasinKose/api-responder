@@ -174,14 +174,14 @@ class ApiResponder
 
     /**
      * @param string $message
-     * @param array $errors
+     * @param array $attr
      * @return JsonResponse
      */
-    public function accepted(string $message = "Accepted", $errors = []): JsonResponse
+    public function accepted(string $message = "Accepted", $attr = []): JsonResponse
     {
         return $this->apiResponse([
             'message' => $message,
-            'errors' => $errors
+            'attr' => $attr
         ], Response::HTTP_ACCEPTED);
     }
 }
