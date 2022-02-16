@@ -171,4 +171,17 @@ class ApiResponder
             'errors' => $errors
         ], Response::HTTP_NO_CONTENT);
     }
+
+    /**
+     * @param string $message
+     * @param array $errors
+     * @return JsonResponse
+     */
+    public function accepted(string $message = "Accepted", $errors = []): JsonResponse
+    {
+        return $this->apiResponse([
+            'message' => $message,
+            'errors' => $errors
+        ], Response::HTTP_ACCEPTED);
+    }
 }
